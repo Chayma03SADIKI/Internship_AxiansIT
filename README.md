@@ -1,43 +1,40 @@
-# Portail de Support Avant Vente
-Filtre des équipements sur la base de critères des spécifications
+# Pre-Sales Support Portal
+Filter equipment based on specification criteria
 
-Description : Ce projet est une plateforme de filtrage des équipement réseaux, développée pour permettre aux administrateurs de l'équipe avant-vente Axians IT de gérer les paramètres, les modèles, et les catégories associés à ces équipements. Le système comprend des fonctionnalités pour ajouter, modifier et supprimer des modèles et des dispositifs et les paramètres associés, ainsi que des options de filtrage avancées.
+Description: This project is a network equipment filtering platform developed to enable the pre-sales team at Axians IT to manage parameters, models, and categories associated with these devices. The system includes features for adding, modifying, and deleting models and devices, along with associated parameters, and provides advanced filtering options.
 
-Fonctionnalités
+## Features
 
-Gestion des Modèles : 
-* Création, modification et suppression de modèles.
-* Ajout de nouveaux paramètres à chaque modèle.
-* Affichage et gestion des paramètres associés à chaque modèle.
+### Model Management:
+* Creation, modification, and deletion of models.
+* Adding new parameters to each model.
+* Displaying and managing parameters associated with each model.
 
+### Device Management:
+* Adding, modifying, and deleting devices.
+* Associating devices with specific models.
+* Uploading images for devices.
 
-Gestion des Dispositifs :
-* Ajout, modification et suppression de dispositifs.
-* Association des dispositifs avec des modèles spécifiques.
-* Téléchargement d'images pour les dispositifs.
+### User Interface:
+* Administration interface with a device and model management panel.
+* Sidebar for easy navigation.
+* Modals for adding and editing devices and models.
 
+## Installation:
 
-Interface Utilisateur :
-* Interface d'administration avec un panneau de gestion des dispositifs et des modèles.
-* Barre de navigation latérale pour une navigation facile.
-* Modals pour l'ajout et l'édition des dispositifs et des modèles.
+### Clone the Repository:
+* Clone the repository to your local machine.
 
+### Configure the Web Server:
+* Ensure that your web server (Apache) is configured to point to the project directory.
 
-Installation :
-* Cloner le Répertoire
-* Configurer le Serveur Web : Assurez-vous que votre serveur web (Apache) est configuré pour pointer vers le répertoire du projet.
+### Configure the Database:
+* Create a MySQL database.
+* Import the provided `equipements.sql` file to create the necessary tables.
 
+### Configure the Configuration Files:
+* Update the database connection details in `config.php`.
+* Install necessary dependencies and extensions.
 
-Configurer la Base de Données :
-* Créez une base de données MySQL.
-* Importez le fichier equipements.sql fournis pour créer les tables nécessaires.
-
-
-Configurer les Fichiers de Configuration
-* Mettez à jour les informations de connexion à la base de données dans config.php.
-* Installer les Dépendances et les extentions necessaires
-
-
-Accéder à la Plateforme
-* Ouvrez votre navigateur et accédez à http://localhost/ ou à l'URL de votre serveur.
-
+### Access the Platform:
+* Open your browser and navigate to http://localhost/ or your server's URL.
