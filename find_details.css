@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  /*overflow-y: hidden;*/
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Global Styles */
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 40px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+  background: #ffffff;
+}
+
+/* Header Start */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 20px 80px;
+  background: #E3E6F3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#header .logo {
+  max-height: 45px;
+  border-radius: 30px;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+  flex: 1;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #075EB2;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #941462;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #941462;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Presentation Section */
+#presentation {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+#presentation img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+#presentation .device-info {
+  text-align: center;
+}
+
+#presentation h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+#presentation h2 {
+  font-size: 24px;
+  color: #075EB2;
+}
+
+/* Device Details Section */
+.device-details {
+  margin-left: 520px; /* 500px for presentation section + 20px margin */
+  padding: 10px 40px;
+  overflow-y:auto;
+  height: 100vh;
+}
+
+.device-details table {
+  width: 930px;
+  margin-top: 10px;
+  border-collapse: separate;
+}
+
+.device-details th, .device-details td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.device-details th {
+  background-color: #075EB2;
+  color: white;
+  text-transform: capitalize;
+}
+
+.device-details td {
+  background-color: #f2f2f2;
+  color: #222;
+}
+
+/* Adjust margins for device-details */
+.device-details {
+  margin-top: 20px;
+  margin-left: 520px; /* 500px for presentation section + 20px margin */
+  padding: 20px 20px;
+}

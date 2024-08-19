@@ -1,0 +1,85 @@
+/* account.css */
+
+/* Styles généraux */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    padding-left: 250px; /* Assurez-vous de laisser de l'espace pour la sidebar */
+    overflow-x: hidden;
+}
+
+/* Style pour le conteneur principal */
+.container {
+    margin-left: 250px;
+    width: 800px; /* Ajuste la largeur pour occuper l'espace restant avec les marges */
+    background-color: #fff;
+    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
+}
+
+/* Style pour les formulaires */
+form {
+    margin-bottom: 20px;
+    margin : 0 40px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #075EB2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"],
+.input-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 150px;
+    padding: 10px;
+    background-color: #075EB2;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #063a82;
+}
+
+/* Style pour l'image de profil */
+input[type="file"] + img {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Media queries pour mobile */
+@media (max-width: 768px) {
+    body {
+        padding-left: 0;
+    }
+
+    .container {
+        width: calc(100% - 40px);
+    }
+}

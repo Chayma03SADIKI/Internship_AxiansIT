@@ -1,0 +1,279 @@
+/* Réinitialisation des styles de base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #075EB2;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+/* Conteneur principal */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px); /* Ajuste la largeur pour éviter le défilement horizontal */
+    box-sizing: border-box;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+/* Conteneur général */
+.container {
+    margin: 20px auto;
+    width: calc(100% - 40px); /* Ajuste la largeur avec une marge de 20px de chaque côté */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Section d'ajout de catégorie */
+.add-category {
+    border: 0px solid;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background-color: #E3E6F3; /* Couleur mise à jour */
+    position: relative;
+}
+
+.add-category h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #941462;
+}
+
+/* Styles pour les champs de saisie */
+.add-category label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.add-category input[type="text"],
+.add-category textarea {
+    width: calc(100% - 20px); /* Ajuste la largeur avec les marges internes */
+    margin: 0 10px 10px 0; /* Marges sur les côtés (droite) et en bas */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Styles pour le bouton de soumission */
+.add-category input[type="submit"] {
+    display: block;
+    margin: 0 10px 10px auto;
+    padding: 10px 20px;
+    background-color: #941462; /* Couleur de fond */
+    color: white; /* Texte blanc */
+    border-color: #ffffff;
+    border-radius: 15px;
+    cursor: pointer; /* Curseur pointeur au survol */
+    transition: transform 0.3s ease-in-out; /* Transition fluide */
+}
+
+.add-category input[type="submit"]:hover {
+    background-color: #dd1d94; /* Couleur de fond plus foncée */
+    transform: scale(1.1); /* Agrandissement au survol */
+}
+
+/* Styles pour le champ de fichier */
+.add-category input[type="file"] {
+    border: none; /* Suppression de la bordure */
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer; /* Curseur pointeur au survol */
+}
+
+.add-category input[type="file"]::file-selector-button {
+    padding: 5px 10px;
+    background-color: #dd1d94;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; /* Transition fluide */
+}
+
+.add-category input[type="file"]::file-selector-button:hover {
+    background-color: #941462; /* Couleur de fond plus foncée */
+}
+
+/* Liste des catégories */
+.category-list h2 {
+    color: #941462;
+    margin: 20px 0;
+}
+
+.category-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.category-list table th,
+.category-list table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.category-list table td img {
+    max-width: 100%; /* Assurez-vous que les images ne dépassent pas les cellules */
+    height: auto;
+}
+
+.category-list table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.category-list table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.operations a {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Styles pour les fenêtres modales */
+.modal-message,
+.modal-edit {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
+    padding-top: 60px;
+}
+
+.modal-message .modal-content,
+.modal-edit .modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 50%; /* Ajustez la largeur selon vos besoins */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.modal-message .modal-content {
+    border: 2px solid #075EB2; /* Bordure bleue */
+}
+
+.modal-message .close,
+.modal-edit .close {
+    color: #075EB2;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-message .close:hover,
+.modal-edit .close:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Styles pour la fenêtre modale d'édition */
+.modal-edit h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #941462;
+}
+
+.modal-edit label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-edit input[type="text"],
+.modal-edit textarea {
+    width: 80%;
+    margin: 0 auto 10px auto;
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.modal-edit textarea {
+    height: 100px;
+    resize: none; /* Empêche le redimensionnement */
+}
+
+.modal-edit input[type="file"] {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+}
+
+.modal-edit input[type="file"]::file-selector-button {
+    padding: 5px 10px;
+    background-color: #dd1d94;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.modal-edit input[type="file"]::file-selector-button:hover {
+    background-color: #941462;
+}
+
+.modal-edit input[type="submit"] {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #941462;
+    color: white;
+    border-color: #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal-edit input[type="submit"]:hover {
+    background-color: #dd1d94;
+}
+
+/* Styles pour les boutons */
+.btn {
+    background-color: #ffffff;
+    border: none;
+    color: white;
+    padding: 12px 12px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #6c6565;
+}
+
+.operations form {
+    display: inline;
+}

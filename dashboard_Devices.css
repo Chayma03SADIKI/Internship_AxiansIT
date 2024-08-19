@@ -1,0 +1,210 @@
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 0;
+    overflow-x: hidden;  /*Empêche le défilement horizontal */
+}
+
+/* Conteneur principal */
+.container {
+    margin-left: 250px; /* Compte pour la largeur de la sidebar */
+    padding: 20px;
+    width: calc(100% - 320px); /* Ajuste la largeur pour éviter le défilement horizontal */
+}
+
+h1 {
+    text-align: center;
+    color: #075EB2;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+/* Section de sélection de modèle */
+#modelSelect {
+    margin-bottom: 20px;
+}
+
+#modelSelect label {
+    font-size: 1.5em;
+    margin-right: 10px;
+    text-align: center;
+    color: #075EB2;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+#modelSelect select {
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Section d'ajout de nouvel appareil */
+h3 {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.5em;
+    color: #075EB2;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #941462;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #dd1d94;
+}
+
+/* Style pour les boutons de gestion des appareils */
+.btn {
+    background-color: #ffffff;
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #6c6565;
+}
+
+/* Style pour les modales */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 50%; /* Ajustez la largeur selon vos besoins */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+
+.close {
+    color: #075EB2;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+
+form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+    overflow: auto;
+}
+
+form input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+form textarea {
+    height: 50px;
+    resize: none; /* Empêche le redimensionnement */
+    width: 100%; /* Assure que le textarea occupe toute la largeur disponible */
+    box-sizing: border-box; /* Inclut les bordures et le padding dans la largeur totale */
+    padding: 8px; /* Ajoute un peu de padding pour le confort de l'utilisateur */
+    border: 1px solid #ccc; /* Ajoute une bordure grise */
+    border-radius: 5px; /* Arrondit les coins */
+}
+
+form button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #941462;
+    color: white;
+    border-color: #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: #dd1d94;
+}
+
+/* Styles pour la liste des appareils */
+#deviceList table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#deviceList table th,
+#deviceList table td {
+    padding: 15px;
+    text-align: left;
+}
+
+#deviceList table td img {
+    max-width: 100%; /* Assurez-vous que les images ne dépassent pas les cellules */
+    height: auto;
+}
+
+#deviceList table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#deviceList table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.operations {
+    display: inline;
+}
+
+/* Styles pour les boutons */
+.btn {
+    background-color: #ffffff;
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #6c6565;
+}

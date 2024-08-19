@@ -1,0 +1,161 @@
+body {
+  background: url('image/hero.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Styles pour le corps avec une image de fond */
+body {
+  background: url('image/hero.png') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  font-family: "Spartan", sans-serif;
+}
+
+/* Header Start */
+/*#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 20px 80px;
+  background: #E3E6F3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#header .logo {
+  max-height: 45px;
+  border-radius:30px;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+  flex: 1;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #075EB2;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #941462;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background:#941462;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}*/
+
+
+
+/* Styles pour le conteneur de connexion */
+.login-container {
+  max-width: 400px;
+  margin: 75px auto 0 auto;
+  padding: 40px;
+  background: rgba(245, 245, 245, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #941462;
+  text-align: center;
+}
+
+.login-container .input-group {
+  margin-bottom: 20px;
+}
+
+.login-container .input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #075EB2;
+}
+
+.login-container .input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 20px; /* espace pour l'icône */
+}
+
+.password-container i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #075EB2;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #941462;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-container button:hover {
+  background: #4f0b35;
+}
+
+.signup-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.signup-link p {
+  font-size: 14px;
+  color: #666;
+}
+
+.signup-link a {
+  color: #075EB2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}

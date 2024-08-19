@@ -1,0 +1,325 @@
+/* Réinitialisation des styles de base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Conteneur principal */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px); 
+    box-sizing: border-box;
+    overflow-x: hidden; 
+}
+
+/* Conteneur général */
+.container {
+    margin: 20px auto;
+    width: calc(100% - 40px); /* Ajuste la largeur avec une marge de 20px de chaque côté */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Section d'ajout de modèle */
+.add-model label, 
+.add-model input[type="text"], 
+.add-model select, 
+.add-model button {
+    color: #000;
+}
+
+.add-model {
+    border: 0px solid;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background-color: #E3E6F3; /* Couleur mise à jour */
+    position: relative;
+}
+
+.add-model h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #941462;
+}
+
+/* Styles pour les champs de saisie */
+.add-model label{
+    display: block;
+    margin-bottom: 5px;
+    color: #000; /* Noir */
+
+}
+
+.add-model input[type="text"],
+.add-model textarea {
+    width: calc(100% - 20px); /* Ajuste la largeur avec les marges internes */
+    margin: 0 10px 10px 0; /* Marges sur les côtés (droite) et en bas */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    color: #000; /* Noir */
+}
+
+/* Styles pour les sélecteurs */
+.add-model select {
+    width: calc(100% - 20px);
+    margin: 0 10px 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #000; /* Noir */
+}
+
+/* Styles pour le bouton de soumission */
+.add-model input[type="submit"] {
+    display: block;
+    margin: 0 10px 10px auto;
+    padding: 10px 20px;
+    background-color: #941462; /* Couleur de fond */
+    color: white; /* Texte blanc */
+    border-color: #ffffff;
+    border-radius: 15px;
+    cursor: pointer; /* Curseur pointeur au survol */
+    transition: transform 0.3s ease-in-out; /* Transition fluide */
+}
+
+.add-model input[type="submit"]:hover, .add-category input[type="submit"]:hover {
+    background-color: #dd1d94; /* Couleur de fond plus foncée */
+    transform: scale(1.1); /* Agrandissement au survol */
+}
+
+
+/* Liste des modèles */
+.model-list{
+    border: 0px solid;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.model-list h2 {
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: bold;
+    color: #941462;
+}
+
+/* Styles pour le tableau */
+.model-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.model-list table th,
+.model-list table td
+{
+    padding: 15px;
+    text-align: left;
+}
+
+.model-list table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.model-list table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Boutons d'opération */
+.model-list .operations {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 6px; 
+}
+
+.operations .btn { 
+    background-color: #ffffff;
+    border: none;
+    color: white;
+    padding: 12px 12px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.operations .btn:hover {
+    background-color: #6c6565;
+}
+
+/*Modal style*/
+/* Style for the modal background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe; /* White background */
+    margin: 10% auto; /* Centered */
+    padding: 20px;
+    border: 1px solid #888; /* Gray border */
+    width: 80%; /* 80% width */
+    max-width: 600px; /* Max width for larger screens */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Shadow */
+    animation: fadeIn 0.3s; /* Fade-in animation */
+}
+
+/* Animation de fondu pour la modale */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Modal style */
+/* Style for the modal background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe; /* White background */
+    margin: 10% auto; /* Centered */
+    padding: 20px;
+    border: 1px solid #888; /* Gray border */
+    width: 80%; /* 80% width */
+    max-width: 600px; /* Max width for larger screens */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Shadow */
+    animation: fadeIn 0.3s; /* Fade-in animation */
+    position: relative; /* For positioning close button */
+}
+
+/* Animation de fondu pour la modale */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Style for edit modal */
+.modal-edit h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #941462;
+}
+
+.modal-edit label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-edit input[type="text"],
+.modal-edit select {
+    width: 80%;
+    margin: 0 auto 10px auto;
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.modal-edit input[type="submit"] {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #941462;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.modal-edit input[type="submit"]:hover {
+    background-color: #dd1d94;
+}
+
+/* Message in modal */
+
+.modal-message .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.modal-message p {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
+
+#search {
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 2px solid #075EB2;
+    border-radius: 5px;
+}
+
